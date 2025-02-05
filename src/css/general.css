@@ -1,8 +1,6 @@
 :root {
   --headerHeight: 57px;
   --footerHeight: 38px;
-
-  --color_1: black;
 }
 
 * {
@@ -14,6 +12,15 @@
 
 body {
   min-height: 100dvh;
+}
+
+.lightTheme {
+  --color_1: black;
+  --color_2: white;
+}
+.darkTheme {
+  --color_1: white;
+  --color_2: black;
 }
 
 .container {

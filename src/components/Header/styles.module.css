@@ -1,16 +1,21 @@
 .root {
+  background-color: var(--color_2);
+  color: var(--color_1);
   height: var(--headerHeight);
   position: sticky;
   top: 0;
   margin-bottom: 10px;
   backdrop-filter: blur(7px);
 }
+
 .container {
   display: flex;
   align-items: center;
   gap: 15px;
   justify-content: space-between;
 }
+
+/* TODO: add burger for links at phone version */
 
 .links {
   display: grid;

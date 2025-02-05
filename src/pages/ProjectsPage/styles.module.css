@@ -1,12 +1,16 @@
 .root {
+  background: var(--color_2);
+}
+.container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+  color: var(--color_1);
 }
 
 .project {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--color_1);
   padding: 10px;
 
   .title { 
@@ -15,6 +19,9 @@
   }
   .whatIs {
     margin-bottom: 5px;
+  }
+  a {
+    color: var(--color_1);
   }
 }
 

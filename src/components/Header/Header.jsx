@@ -1,5 +1,9 @@
 // libs
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+// store
+import { toggleTheme } from '../../store/slices/themeSlice';
 
 // routes
 import ROUTES from '../../utils/routes';
@@ -8,14 +12,17 @@ import ROUTES from '../../utils/routes';
 import classes from './styles.module.css';
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const {isDarkTheme} = useSelector(s => s.theme);
+
   const links = [
     {title: "About", to: ROUTES.ABOUT},
     {title: "Projets", to: ROUTES.PROJECTS},
     {title: "Contact", to: ROUTES.CONTACT},
   ];
 
-  const toggleTheme = () => {
-    // TODO: toggle theme
+  const toggleThemeButton = () => {
+    dispatch(toggleTheme());
   };
 
   return (
@@ -29,7 +36,7 @@ export default function Header() {
             <Link className={classes.link} to={link.to} key={ind}>{link.title}</Link>
           )}
 
-          <button onClick={toggleTheme}>dark theme</button>
+          <button onClick={toggleThemeButton}>{isDarkTheme ? "dark" : "light"} theme</button>
         </div>
       </div>
     </div>

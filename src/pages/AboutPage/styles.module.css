@@ -1,5 +1,7 @@
 .root {
-  min-height: 50dvh;
+  min-height: inherit;
+  background: var(--color_2);
+
   .container {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,7 @@
   }
 
   p {
+    color: var(--color_1);
     a {
       font-weight: bold;
       color: var(--color_1);
