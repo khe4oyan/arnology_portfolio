@@ -1,3 +1,10 @@
+:root {
+  --headerHeight: 57px;
+  --footerHeight: 38px;
+
+  --color_1: black;
+}
+
 * {
   margin: 0;
   padding: 0;
