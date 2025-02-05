@@ -1,1 +1,16 @@
-.root {}
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  text-align: center;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
