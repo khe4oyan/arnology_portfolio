@@ -11,7 +11,7 @@ export default function ProjectsPage() {
         <div key={ind} className={classes.project}>
           <p className={classes.title}>{projectData.title}</p>
           <p className={classes.whatIs}>{projectData.whatIs}</p>
-          <a href={projectData.link}>demo</a>
+          <a href={projectData.link} target='_blank'>demo</a>
         </div>
       )}
     </div>
