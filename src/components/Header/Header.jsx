@@ -14,6 +14,10 @@ export default function Header() {
     {title: "Contact", to: ROUTES.CONTACT},
   ];
 
+  const toggleTheme = () => {
+    // TODO: toggle theme
+  };
+
   return (
     <div className={classes.root}>
       <div className={`container ${classes.container}`}>
@@ -24,6 +28,8 @@ export default function Header() {
           {links.map((link, ind) =>
             <Link className={classes.link} to={link.to} key={ind}>{link.title}</Link>
           )}
+
+          <button onClick={toggleTheme}>dark theme</button>
         </div>
       </div>
     </div>
