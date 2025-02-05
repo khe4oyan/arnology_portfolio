@@ -1,1 +1,4 @@
 .root {}
+.outlet {
+  min-height: calc(100dvh - (var(--headerHeight) + var(--footerHeight)) - 30px);
+}

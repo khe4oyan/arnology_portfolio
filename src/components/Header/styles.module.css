@@ -1,4 +1,5 @@
 .root {
+  height: var(--headerHeight);
   position: sticky;
   top: 0;
   margin-bottom: 10px;

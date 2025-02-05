@@ -1,1 +1,15 @@
-.root {}
+.root {
+  min-height: 50dvh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  p {
+    a {
+      font-weight: bold;
+      color: var(--color_1);
+    }
+  }
+}

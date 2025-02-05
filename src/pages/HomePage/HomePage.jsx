@@ -25,7 +25,9 @@ export default function HomePage() {
   return (
     <div className={classes.root}>
       <Header />
-      <Outlet />
+      <div className={classes.outlet}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   )
