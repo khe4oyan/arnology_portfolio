@@ -5,11 +5,15 @@
   flex-direction: column;
   gap: 5px;
 
+  .headerText {
+    color: var(--color_1);
+  }
+
   input, textarea, .sendButton {
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid var(--color_1);
     width: 400px;
   }
 

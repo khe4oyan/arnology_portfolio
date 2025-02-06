@@ -15,16 +15,102 @@
   justify-content: space-between;
 }
 
-/* TODO: add burger for links at phone version */
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-
+.links_PC, .links_mobile {
   .link {
     text-decoration: none;
     color: var(--color_1);
     font-weight: bold;
+  }
+}
+
+/* PC Version */
+@media screen and (width >= 511px) {
+  .links_PC {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 5px;
+
+    button {
+      color: var(--color_1);
+      font-size: 1rem;
+      font-weight: bold;
+      background: none;
+      outline: none;
+      border: none;
+    }
+  }
+
+  .links_mobile {
+    display: none;
+  }
+}
+
+/* Mobile Version */
+@media screen and (width <= 510px) {
+  .links_mobile {
+    .burger {
+      --size: calc(var(--headerHeight) / 2);
+      height: var(--size);
+      width: var(--size);
+      background-color: var(--color_2);
+      outline: none;
+      border: none;
+
+      .burgerLine {
+        transition: .3s;
+        height: 20%;
+        width: 100%;
+        background-color: var(--color_1);
+        margin: 5px;
+        border-radius: 10px;
+      }
+    }
+
+    .burger.active {
+      .burgerLine:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      .burgerLine:nth-child(2) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+
+    .burger.active ~ .links {
+      right: 0;
+    }
+    
+    .links {
+      transition: .5s;
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      position: absolute;
+      right: 100%;
+      top: var(--headerHeight);
+      height: calc(100dvh - var(--headerHeight));
+      font-size: 1.9rem;
+      text-align: center;
+      background-color: var(--color_2);
+
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        color: var(--color_1);
+        font-size: 1.9rem;
+        font-weight: bold;
+        background: none;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
+  .links_PC {
+    display: none;
   }
 }

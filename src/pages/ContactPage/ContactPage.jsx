@@ -45,7 +45,7 @@ export default function ContactPage() {
   return (
     <div className={classes.root}>
       <div className={`container ${classes.container}`}>
-        <h2>Contact me</h2>
+        <h2 className={classes.headerText}>Contact me</h2>
         <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Your name' />
         <input value={gmail} onChange={(e) => setGmail(e.target.value)} type="text" placeholder='Your gmail' />
         <textarea value={message} onChange={(e) => setMessage(e.target.value)} type="text" placeholder='Your message' rows={7}/>
